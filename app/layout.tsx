@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { MantineProvider } from "@mantine/core";
+import Navbar from "./Components/Navbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +15,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="bg-black no-scrollbar overflow-y-scroll overflow-x-hidden">
+        <MantineProvider>
+          <div className="h-full bg-main-background-image bg-cover bg-fixed ">
+            <div className="h-full bg-black bg-opacity-70">
+              <Navbar />
+              {children}
+            </div>
+          </div>
+        </MantineProvider>
+      </body>
     </html>
   );
 }
