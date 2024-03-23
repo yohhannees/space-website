@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import ImageCard from "./ImgCard";
 import ImageGrid from "./ImgGrid";
+import EventCard from "./EventCard";
 
 function Event() {
   return (
@@ -62,6 +63,12 @@ function Event() {
       </div>
       <div className="flex space-x-4 m-4 pt-20  pb-20  justify-center ">
         <ImageGrid />
+      </div>
+      <div className="text-center font-extrabold text-white text-6xl ">
+        Upcoming Events
+      </div>
+      <div className="flex space-x-4 m-4 pt-20  pb-20  justify-center ">
+        <EventCard />
       </div>
     </div>
   );
