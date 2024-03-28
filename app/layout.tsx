@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "@mantine/core/styles.css";
 import "./globals.css";
 import { MantineProvider } from "@mantine/core";
 import Navbar from "./Components/Navbar";
