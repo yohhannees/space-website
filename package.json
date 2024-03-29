@@ -14,10 +14,13 @@
     "@mantine/hooks": "^7.6.2",
     "@mantine/modals": "^7.6.2",
     "@tabler/icons-react": "^3.1.0",
+    "@types/axios": "^0.14.0",
+    "axios": "^1.6.8",
     "clsx": "^2.1.0",
     "embla-carousel-react": "^8.0.0",
     "framer-motion": "^11.0.20",
     "next": "14.1.1",
+    "nodemailer": "^6.9.13",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.2.2"

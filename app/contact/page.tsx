@@ -1,19 +1,39 @@
-'use client';
+"use client";
 import React, { useState } from "react";
 import { ContactIconsList } from "./ContactIcons";
+import router, { useRouter } from "next/router";
+import axios from "axios";
+
 
 function ContactForm() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (event:any) => {
+  const handleSubmit = async (event: any) => {
     event.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted:", { email, subject, message });
-    // You can send the form data to an API or perform any other action here
-  };
 
+    try {
+      // Send form data to the server-side endpoint
+      const response = await axios.post("/api", {
+        email: email,
+        subject: subject,
+        message: message,
+      });
+
+      if (response.status === 200) {
+        console.log("Email sent successfully");
+        // Redirect to a success page or show a success message
+        router.push("/success"); // Replace '/success' with your success page URL
+      } else {
+        console.error("Error sending email:", response.data.error);
+        // Handle error - e.g., show an error message to the user
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      // Handle error - e.g., show an error message to the user
+    }
+  };
   return (
     <section className="">
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
@@ -86,35 +106,35 @@ function ContactForm() {
         </form>
       </div>
       <div className="container mb-9 my-24 mx-auto md:px-6">
-  <section className="mb-32">
-    <div className="block rounded-lg bg-white shadow-[0 2px 15px -3px rgba(0,0,0,0.07), 0 10px 20px -2px rgba(0,0,0,0.04)] dark:bg-slate-800">
-      <div className="flex flex-wrap items-center">
-        <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
-          <div className="h-[500px] w-full">
-            <iframe src="https://maps.google.com/maps?q=Addis%20Ababa%20Science%20and%20Technology%20University&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              className="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg" 
-              ></iframe>
-          </div>
-        </div>
-        <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
-          <div className="flex flex-wrap px-3 pt-12 pb-12 md:pb-0 lg:pt-0">
-            <div className="mb-12 w-full shrink-0 grow-0 basis-auto px-3 md:w-6/12 md:px-6 lg:w-full xl:w-6/12 xl:px-12">
-              <div className="flex items-start">
-                <div className="shrink-0">
-                  <div className="inline-block rounded-md bg-primary-100 p-4 text-primary">
-                  </div>
+        <section className="mb-32">
+          <div className="block rounded-lg bg-white shadow-[0 2px 15px -3px rgba(0,0,0,0.07), 0 10px 20px -2px rgba(0,0,0,0.04)] dark:bg-slate-800">
+            <div className="flex flex-wrap items-center">
+              <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
+                <div className="h-[500px] w-full">
+                  <iframe
+                    src="https://maps.google.com/maps?q=Addis%20Ababa%20Science%20and%20Technology%20University&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    className="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
+                  ></iframe>
                 </div>
-                <div className="ml-6 grow">
-                  <ContactIconsList/>
+              </div>
+              <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
+                <div className="flex flex-wrap px-3 pt-12 pb-12 md:pb-0 lg:pt-0">
+                  <div className="mb-12 w-full shrink-0 grow-0 basis-auto px-3 md:w-6/12 md:px-6 lg:w-full xl:w-6/12 xl:px-12">
+                    <div className="flex items-start">
+                      <div className="shrink-0">
+                        <div className="inline-block rounded-md bg-primary-100 p-4 text-primary"></div>
+                      </div>
+                      <div className="ml-6 grow">
+                        <ContactIconsList />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-    </div>
-  </section>
-</div>
     </section>
   );
 }
