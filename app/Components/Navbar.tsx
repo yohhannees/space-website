@@ -15,7 +15,7 @@ function Navbar() {
 				/>
 			</Link>
 			<div className="flex gap-8 text-sm">
-				<Link href="#">EVENTS</Link>
+				<Link href="/event">EVENTS</Link>
 				<Link href="/about_us">ABOUT US</Link>
 				<Link href="#">GALLERY & MEDIA</Link>
 				<Link href="#">CLUB WEBSITE</Link>
