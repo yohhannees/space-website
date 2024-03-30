@@ -19,7 +19,7 @@ function Navbar() {
 				<Link href="/about_us">ABOUT US</Link>
 				<Link href="#">GALLERY & MEDIA</Link>
 				<Link href="#">CLUB WEBSITE</Link>
-				<Link href="#">TEAM</Link>
+				<Link href="/team">TEAM</Link>
 			</div>
 			<div>
 				<button className="bg-red-500 px-5 py-1 text-white text-sm rounded-full ">
