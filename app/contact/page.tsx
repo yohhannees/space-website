@@ -7,15 +7,19 @@ import axios from "axios";
 
 function ContactForm() {
   const [email, setEmail] = useState("");
+  const [senderName, setSenderName] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+
+  const emailEndpoint = "https://ahamenes-admin.onrender.com/api/send-emai";
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
 
     try {
       // Send form data to the server-side endpoint
-      const response = await axios.post("/api", {
+      const response = await axios.post(emailEndpoint, {
+        senderName: senderName,
         email: email,
         subject: subject,
         message: message,
@@ -45,6 +49,22 @@ function ContactForm() {
           Club?
         </p>
         <form onSubmit={handleSubmit} className="space-y-8">
+          <div>
+            <label
+              htmlFor="name"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >
+              Your name
+            </label>
+            <input
+              type="text"
+              id="name"
+              value={senderName}
+              onChange={(e) => setSenderName(e.target.value)}
+              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              placeholder="Enter your name here"
+            />
+          </div>
           <div>
             <label
               htmlFor="email"
