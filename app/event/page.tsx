@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import {moonVid} from "@/public/pictures/moonVid.mp4"
 import ImageCard from "./ImgCard";
 import ImageGrid from "./ImgGrid";
 import EventCard from "./EventCard";
@@ -9,12 +10,12 @@ import cn from "@/utils/cn";
 import { Button } from "@mantine/core";
 import EventDisplay from "../Components/EventDisplay";
 import eventData from "./dummy";
+import { motion } from "framer-motion";
 
 const alfa = Alfa_Slab_One({
 	weight: "400",
 	subsets: ["latin"],
 });
-
 
 function Event() {
 	const [currentEvent, setCurrentEvent] = useState(eventData[0]);
@@ -39,6 +40,14 @@ function Event() {
 					</div>
 				</div>
 			</div>
+
+			{/* !!!!  NOT WORKING  !!!! */}
+			{/* <div className="bg-red-600">
+				<video width="320" height="320" preload="none" loop>
+					<source src="/pictures/moonVid.mp4" type="video/mp4" />
+				</video>
+			</div> */}
+
 			<div className="space-y-10">
 				{/* Moon Image */}
 				<div className="relative flex justify-center">
@@ -50,13 +59,20 @@ function Event() {
 					>
 						Recent Events
 					</div>
-					<Image
-						className="absolute top-0 left-[170px] z-10"
-						src="/pictures/moon_.png"
-						alt="Description of image"
-						width={200}
-						height={200}
-					/>
+					<motion.div
+						initial={{ rotateZ: 0 }}
+						animate={{ rotateZ: 360 }}
+						transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+						className="absolute top-0 left-[170px] z-10 inline"
+					>
+						<Image
+							// className="absolute top-0 left-[170px] z-10"
+							src="/pictures/moon_.png"
+							alt="Description of image"
+							width={200}
+							height={200}
+						/>
+					</motion.div>
 					<div className="flex">
 						<Image
 							src="/pictures/redMoon.png"
@@ -138,7 +154,7 @@ function Event() {
 			<div className="flex space-x-4 m-4 justify-center mt-10">
 				{eventData.map((el) => {
 					return (
-						<div key={el.title} onClick={()=>setCurrentEvent(el)}>
+						<div key={el.title} onClick={() => setCurrentEvent(el)}>
 							<ImageCard src={el.imageURL} />
 						</div>
 					);

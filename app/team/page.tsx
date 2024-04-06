@@ -7,6 +7,7 @@ import React from "react";
 import EmblaCarousel from "../Components/EmblaCarousel/EmblaCarousel";
 import { leaders } from "./dummy";
 import Link from "next/link";
+import TeamMemberCard from "../Components/TeamMemberCard";
 
 const alfa = Alfa_Slab_One({
 	weight: "400",
@@ -73,6 +74,26 @@ function page() {
 							</div>
 						);
 					})}
+				</div>
+			</div>
+
+			{/* Coordinators section */}
+			<div className="mt-10">
+				<div className="font-extrabold text-4xl text-center text-white mb-10">Coordinators</div>
+				<div className="grid grid-cols-5 gap-2">
+					{[...Array(10)].map((_, i) => (
+						<TeamMemberCard key={i} />
+					))}
+				</div>
+			</div>
+
+			{/* CFounding team section */}
+			<div className="mt-20">
+				<div className="font-extrabold text-4xl text-center text-white mb-10">Founding Team</div>
+				<div className="grid grid-cols-5 gap-2">
+					{[...Array(10)].map((_, i) => (
+						<TeamMemberCard key={i} />
+					))}
 				</div>
 			</div>
 

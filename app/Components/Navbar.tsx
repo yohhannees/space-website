@@ -5,8 +5,8 @@ import Image from "next/image";
 function Navbar() {
     // THis navbar is a placeholder untill the actual navbar is submited
 	return (
-		<div className="lg:h-[80px] bg-transparent flex justify-between items-center px-16 text-white">
-			<Link href='/' className="mt-5">
+		<div className="lg:h-[80px] bg-gradient-to-b from-black to-transparent flex justify-between items-center px-16 text-white ">
+			<Link href="/" className="mt-5">
 				<Image
 					src="/pictures/ahamenesLogo.png"
 					alt="logo"
@@ -14,7 +14,7 @@ function Navbar() {
 					height={100}
 				/>
 			</Link>
-			<div className="flex gap-8 text-sm">
+			<div className="flex gap-8 text-sm px-3 py-1">
 				<Link href="/event">EVENTS</Link>
 				<Link href="/about_us">ABOUT US</Link>
 				<Link href="#">GALLERY & MEDIA</Link>

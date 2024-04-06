@@ -9,6 +9,8 @@ import cn from "@/utils/cn";
 import { Carousel } from "@mantine/carousel";
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
+import eventData, { eventDataType } from "../event/dummy";
+import Link from "next/link";
 
 const alfa = Alfa_Slab_One({
 	weight: "400",
@@ -117,10 +119,11 @@ export default function Home() {
 	// });
 
 	const autoplay = useRef(Autoplay({ delay: 8000 }));
-
+	const recentEvent: eventDataType = eventData[0];
+	// snap-y snap-mandatory h-screen
 	return (
-		<div className=" text-center content-center snap-y snap-mandatory overflow-y-scroll h-screen z-0 no-scrollbar">
-			{/* Carousel section */}
+		<div className=" text-center content-center overflow-y-scroll z-0 no-scrollbar">
+			{/* Top Carousel section */}
 			<div className="h-screen-minus-80 snap-always snap-center text-white ">
 				<Carousel
 					withIndicators
@@ -190,6 +193,32 @@ export default function Home() {
 							options={OPTIONS}
 						/>
 					</div>
+				</div>
+			</div>
+
+			{/* Recent Events Section */}
+			<div className="snap-always snap-start flex flex-col justify-center items-center py-20 relative">
+				<div className="text-white py-3 px-1 w-[65%] flex text-lg">
+					<div>Recent Events</div>
+				</div>
+				<div className="relative w-[65%] h-[400px]">
+					<Image
+						src={recentEvent.imageURL}
+						fill
+						objectFit="cover"
+						alt="recent event image"
+						className="rounded-lg"
+					/>
+				</div>
+				<div className="w-[430px] text-white bg-black p-5 bg-opacity-85 space-y-1 bottom-60 right-[300px] absolute rounded-lg flex flex-col items-start">
+					<div className="text-[10px]">{recentEvent.date}</div>
+					<div className="text-sm">{recentEvent.title}</div>
+					<p className="text-xs text-start">{recentEvent.text}</p>
+					<Link href={recentEvent.buttonURL}>
+						<div className="bg-white p-2 text-black inline-block rounded-sm text-sm mt-5 hover:cursor-pointer">
+							{recentEvent.buttonText}
+						</div>
+					</Link>
 				</div>
 			</div>
 		</div>

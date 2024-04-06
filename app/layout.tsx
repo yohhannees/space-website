@@ -15,17 +15,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="bg-black no-scrollbar overflow-y-scroll overflow-x-hidden">
-        <MantineProvider>
-          <div className="h-full bg-main-background-image bg-cover bg-fixed ">
-            <div className="h-full bg-black bg-opacity-70">
-              <Navbar />
-              {children}
-            </div>
-          </div>
-        </MantineProvider>
-      </body>
-    </html>
-  );
+			<html lang="en">
+				<body className="bg-black no-scrollbar overflow-y-scroll overflow-x-hidden">
+					<MantineProvider>
+						<div className="h-full bg-main-background-image bg-cover bg-fixed ">
+							<div className="h-full bg-black bg-opacity-70">
+								<div className="fixed w-full h-[80px] z-50 backdrop-blur-[2px]">
+									<Navbar />
+								</div>
+								<div className="pt-[80px]">{children}</div>
+								<div className="h-[200px]">footer</div>
+							</div>
+						</div>
+					</MantineProvider>
+				</body>
+			</html>
+		);
 }
