@@ -1,19 +1,19 @@
-"use client";
+'use client';
 import React, { useState } from "react";
 import { ContactIconsList } from "./ContactIcons";
-import router, { useRouter } from "next/router";
 import axios from "axios";
-
 
 function ContactForm() {
   const [email, setEmail] = useState("");
   const [senderName, setSenderName] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [confirmationMessage, setConfirmationMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const emailEndpoint = "https://ahamenes-admin.onrender.com/api/send-emai";
+  const emailEndpoint = "https://ahamenes-admin.onrender.com/api/send-email";
 
-  const handleSubmit = async (event: any) => {
+  const handleSubmit = async (event: { preventDefault: () => void; }) => {
     event.preventDefault();
 
     try {
@@ -27,17 +27,22 @@ function ContactForm() {
 
       if (response.status === 200) {
         console.log("Email sent successfully");
-        // Redirect to a success page or show a success message
-        router.push("/success"); // Replace '/success' with your success page URL
+        setConfirmationMessage(response.data.message); // Set confirmation message from API response
+        // Clear form fields
+        setEmail("");
+        setSenderName("");
+        setSubject("");
+        setMessage("");
       } else {
         console.error("Error sending email:", response.data.error);
-        // Handle error - e.g., show an error message to the user
+        setErrorMessage(response.data.error); // Set error message from API response
       }
     } catch (error) {
       console.error("Error sending email:", error);
-      // Handle error - e.g., show an error message to the user
+      setErrorMessage("Error sending email. Please try again later."); // Set generic error message
     }
   };
+
   return (
     <section className="">
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
@@ -45,7 +50,7 @@ function ContactForm() {
           Contact Us
         </h2>
         <p className="mb- l font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
-          Got a technical issue? Want to send feedback ? Need details about our
+          Got a technical issue? Want to send feedback? Need details about our
           Club?
         </p>
         <form onSubmit={handleSubmit} className="space-y-8">
@@ -124,6 +129,12 @@ function ContactForm() {
             </button>
           </div>
         </form>
+        {confirmationMessage && (
+          <div className="text-green-600 text-center">{confirmationMessage}</div>
+        )}
+        {errorMessage && (
+          <div className="text-red-600 text-center">{errorMessage}</div>
+        )}
       </div>
       <div className="container mb-9 my-24 mx-auto md:px-6">
         <section className="mb-32">
