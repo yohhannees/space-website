@@ -14,6 +14,9 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "main-background-image": "url(/pictures/milky-way.jpg)",
       },
+      height: {
+        "screen-minus-80": "calc(100vh - 110px)",
+      },
     },
   },
   plugins: [],
