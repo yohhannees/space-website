@@ -3,6 +3,7 @@ import "@mantine/core/styles.css";
 import "./globals.css";
 import { MantineProvider } from "@mantine/core";
 import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,7 +25,7 @@ export default function RootLayout({
 									<Navbar />
 								</div>
 								<div className="pt-[80px]">{children}</div>
-								<div className="h-[200px]">footer</div>
+								<div className=""><Footer/></div>
 							</div>
 						</div>
 					</MantineProvider>
