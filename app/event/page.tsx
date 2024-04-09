@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import {moonVid} from "@/public/pictures/moonVid.mp4"
 import ImageCard from "./ImgCard";
 import ImageGrid from "./ImgGrid";
 import EventCard from "./EventCard";
