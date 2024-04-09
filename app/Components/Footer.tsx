@@ -1,8 +1,5 @@
 import React from "react";
 import Circle from "../assets/images/Ellipse.png";
-import { BiLogoFacebookCircle } from "react-icons/bi";
-import { PiInstagramLogoFill } from "react-icons/pi";
-import { BiLogoLinkedinSquare } from "react-icons/bi";
 
 import Logo from "../assets/svg/logoSpace.svg";
 import Image from "next/image";
@@ -123,19 +120,19 @@ const Footer = () => {
 								href="https://www.w3.org/Provider/Style/dummy.html"
 								className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
 							>
-								<BiLogoFacebookCircle />
+								{/* <BiLogoFacebookCircle /> */}
 							</a>
 							<a
 								href="https://www.w3.org/Provider/Style/dummy.html"
 								className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
 							>
-								<PiInstagramLogoFill />
+								{/* <PiInstagramLogoFill /> */}
 							</a>
 							<a
 								href="https://www.w3.org/Provider/Style/dummy.html"
 								className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
 							>
-								<BiLogoLinkedinSquare />
+								{/* <BiLogoLinkedinSquare /> */}
 							</a>
 						</div>
 						<div className="flex   justify-center ">
