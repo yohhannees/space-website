@@ -16,10 +16,11 @@ function Navbar() {
         />
       </div>
       <div className="flex gap-8 text-sm">
-        <a href="/events">EVENTS</a>
+        <a href="/event">EVENTS</a>
         <a href="/about_us">ABOUT US</a>
-        <a href="/gallery">GALLERY & MEDIA</a>
-        <div
+        <a href="/team">TEAM</a>
+        <a href="/contact">CONTACT US</a>
+        {/* <div
           className="relative "
           onMouseEnter={() => setShowMenu(true)}
           onMouseLeave={() => setShowMenu(false)}
@@ -41,9 +42,9 @@ function Navbar() {
               <div className=" border border-gray-300"></div>
             </div>
           )}
-        </div>
-
-        <a href="/team">TEAM</a>
+        </div> */}
+        <a href="/gallery">GALLERY & MEDIA</a>
+       
       </div>
       <div>
         <button className="bg-red-500 px-5 py-1 text-white text-sm rounded-full ">

@@ -102,7 +102,7 @@ function page() {
 				<div className="flex flex-col justify-center items-center space-y-5">
 					<div className="text-white font-bold text-6xl">Let’s Talk</div>
 					<Link
-						href="#"
+						href="/contact"
 						className="text-purple-700 border-[0.5px] border-purple-700 px-3 rounded-full py-1 w-[100px] font-semibold text-sm flex justify-center"
 					>
 						Contact Us
