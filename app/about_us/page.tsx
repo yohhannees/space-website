@@ -24,22 +24,7 @@ function AboutUs() {
         </div>
 
         <div className="text-white text-left w-[60%]">
-          Lorem ipsum dolor sit amet consectetur. Diam donec egestas est leo
-          malesuada massa quisque vitae at. Aliquet scelerisque magna nulla
-          aenean euismod sed. Adipiscing placerat quisque eu rhoncus
-          consequat.Lorem ipsum dolor sit amet consectetur. Diam donec egestas
-          est leo malesuada massa quisque vitae at. Aliquet scelerisque magna
-          nulla aenean euismod sed. Adipiscing placerat quisque eu rhoncus
-          consequat.Lorem ipsum dolor sit amet consectetur. Diam donec egestas
-          est leo malesuada massa quisque vitae at. Aliquet scelerisque magna
-          nulla aenean euismod sed. Adipiscing placerat quisque eu rhoncus
-          consequat.Lorem ipsum dolor sit amet consectetur. Diam donec egestas
-          est leo malesuada massa quisque vitae at. Aliquet scelerisque magna
-          nulla aenean euismod sed. Adipiscing placerat quisque eu rhoncus
-          consequat.Lorem ipsum dolor sit amet consectetur. Diam donec egestas
-          est leo malesuada massa quisque vitae at. Aliquet scelerisque magna
-          nulla aenean euismod sed. Adipiscing placerat quisque eu rhoncus
-          consequat.
+		Ahemanes Space Club is driven by a deep dedication to the science of astronomy and space technology. Our passion extends far beyond personal interest, as we actively engage in educational outreach, public engagement, and collaboration with space agencies and organizations. Through captivating events like star-gazing parties and educational workshops, we aim to instill a sense of wonder and curiosity about the cosmos while fostering a tight-knit community of like-minded individuals. By actively participating in citizen science initiatives and forming partnerships with space advocacy groups, we contribute to real scientific research and amplify our impact in the field. Furthermore, we emphasize the practical benefits of space exploration, such as technological advancements and environmental monitoring, underlining its crucial relevance to humanitys well-being and the health of our planet. Through storytelling and hands-on activities like experiments and DIY projects, we inspire and motivate others to join us in our journey of exploration, playing a pivotal role in nurturing the next generation of space enthusiasts and scientists. Welcome to Ahemanes Space Club, where the stars are just the beginning of our boundless adventures.
         </div>
       </div>
       <div className="relative w-[80%]">
