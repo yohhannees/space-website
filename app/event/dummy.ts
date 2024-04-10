@@ -13,7 +13,7 @@ const eventData: eventDataType[] = [
         title: "ASTRONAUTS WE KNOW",
         text: "Join us for a talk about the fascinating lives of astronauts, the challenges they face in space, and their groundbreaking contributions to scientific discovery.",
         buttonText: "Learn More",
-        buttonURL: "#",
+        buttonURL: "",
     },
     {
         imageURL: "/pictures/events/Galaxy.png", // Replace with a placeholder image if needed

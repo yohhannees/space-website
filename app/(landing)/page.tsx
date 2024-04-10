@@ -214,7 +214,7 @@ export default function Home() {
 					<div className="text-[10px]">{recentEvent.date}</div>
 					<div className="text-sm">{recentEvent.title}</div>
 					<p className="text-xs text-start">{recentEvent.text}</p>
-					<Link href={recentEvent.buttonURL}>
+					<Link href="/event">
 						<div className="bg-white p-2 text-black inline-block rounded-sm text-sm mt-5 hover:cursor-pointer">
 							{recentEvent.buttonText}
 						</div>

@@ -5,14 +5,12 @@ import React from 'react';
 import { Image, Accordion, Grid, Container, Title } from "@mantine/core";
 import classes from "./FaqWithImage.module.css";
 
-const answer1=
-  "It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.";
+const answer1 = "Astronomy is the scientific study of celestial objects, such as stars, planets, comets, and galaxies.";
+const answer2 = "The Hubble Space Telescope has significantly improved our understanding of the universe.";
+const answer3 = "The Milky Way is the galaxy that contains our Solar System.";
+const answer4 = "Black holes are regions of space where gravity is so strong that nothing, not even light, can escape their pull. They are formed when a massive star collapses under its own gravity after its nuclear fuel is exhausted.";
 
-const answer2=
-  "It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.";
 
-  const answer3 =
-    "It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.";
 
 export default function FaqWithImage() {
   return (
@@ -21,7 +19,7 @@ export default function FaqWithImage() {
         <Grid id="faq-grid" gutter={50}>
           <Grid.Col span={{ base: 12, md: 6 }}>
             <Image
-              src="/pictures/image.b0c2306b.svg"
+              src="/pictures/events/faq.svg"
               alt="Frequently Asked Questions"
             />
           </Grid.Col>
@@ -37,30 +35,32 @@ export default function FaqWithImage() {
             >
               <Accordion.Item className={classes.item} value="reset-password">
                 <Accordion.Control>
-                  How can I reset my password?
+                What is astronomy?
                 </Accordion.Control>
                 <Accordion.Panel>{answer1}</Accordion.Panel>
               </Accordion.Item>
 
               <Accordion.Item className={classes.item} value="another-account">
                 <Accordion.Control>
-                  Can I create more that one account?
-                </Accordion.Control>
-                <Accordion.Panel>{answer1}</Accordion.Panel>
-              </Accordion.Item>
-
-              <Accordion.Item className={classes.item} value="newsletter">
-                <Accordion.Control>
-                  How can I subscribe to monthly newsletter?
+                
+                What has the Hubble Space Telescope contributed to our understanding of the universe?
                 </Accordion.Control>
                 <Accordion.Panel>{answer2}</Accordion.Panel>
               </Accordion.Item>
 
-              <Accordion.Item className={classes.item} value="credit-card">
+              <Accordion.Item className={classes.item} value="newsletter">
                 <Accordion.Control>
-                  Do you store credit card information securely?
+                
+                What is the Milky Way?
                 </Accordion.Control>
                 <Accordion.Panel>{answer3}</Accordion.Panel>
+              </Accordion.Item>
+
+              <Accordion.Item className={classes.item} value="credit-card">
+                <Accordion.Control>
+                What are black holes?
+                </Accordion.Control>
+                <Accordion.Panel>{answer4}</Accordion.Panel>
               </Accordion.Item>
             </Accordion>
           </Grid.Col>
