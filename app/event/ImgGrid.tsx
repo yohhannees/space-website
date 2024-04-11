@@ -10,56 +10,56 @@ interface ImageData {
 const ImageGrid: React.FC = () => {
   const images: ImageData[] = [
     {
-      src: "/pictures/pic1.avif",
+      src: "/pictures/space/present.jpg",
       alt: "Image 1",
       text: "Facebook",
       link: "https://www.facebook.com",
     },
     {
-      src: "/pictures/milky-way.jpg",
+      src: "/pictures/space/present2.jpg",
       alt: "Image 2",
       text: "Twitter",
       link: "https://www.twitter.com",
     },
     {
-      src: "/pictures/pic3.avif",
+      src: "/pictures/space/telescope.jpg",
       alt: "Image 3",
       text: "Instagram",
       link: "https://www.instagram.com",
     },
 
     {
-      src: "/pictures/milky-way.jpg",
+      src: "/pictures/space/bigtelescope.jpg",
       alt: "Image 2",
       text: "Twitter",
       link: "https://www.twitter.com",
     },
     {
-      src: "/pictures/pic3.avif",
+      src: "/pictures/homeCarousel/event1.jpg",
       alt: "Image 3",
       text: "Instagram",
       link: "https://www.instagram.com",
     },
     {
-      src: "/pictures/pic1.avif",
+      src: "/pictures/homeCarousel/event2.jpg",
       alt: "Image 1",
       text: "Facebook",
       link: "https://www.facebook.com",
     },
     {
-      src: "/pictures/pic1.avif",
+      src: "/pictures/homeCarousel/event3.jpg",
       alt: "Image 1",
       text: "Facebook",
       link: "https://www.facebook.com",
     },
     {
-      src: "/pictures/milky-way.jpg",
+      src: "/pictures/homeCarousel/event4.jpg",
       alt: "Image 2",
       text: "Twitter",
       link: "https://www.twitter.com",
     },
     {
-      src: "/pictures/pic3.avif",
+      src: "/pictures/homeCarousel/event5.jpg",
       alt: "Image 3",
       text: "Instagram",
       link: "https://www.instagram.com",

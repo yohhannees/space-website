@@ -52,7 +52,7 @@ function AboutUs() {
       </div>
       <div className="mt-28">
         <Image
-          src="/pictures/TeamPhoto.png"
+          src="/pictures/space/aboutus.jpg"
           alt="Description of other image"
           width={800}
           height={400}
