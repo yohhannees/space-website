@@ -26,15 +26,15 @@ const Footer = () => {
               <div className="absolute top-8 -left-3 text-white text-center h-52 w-52  rounded-full bg-[#6480ff] flex items-center justify-center ">
                 GET IN TOUCH
               </div>
-              <div className="absolute -top-6 -left-16  h-32 w-32 rounded-full bg-blend-lighten bg-black">
+              <div className="absolute -top-6 -left-16  h-32 w-32 rounded-full bg-blend-lighten bg-black opacity-40">
                 {" "}
-                <Image
+                {/* <Image
                   src="/pictures/ahamenesLogo.png"
                   alt="Logo"
                   width={200}
                   height={200}
                   className="me-3"
-                />
+                /> */}
               </div>
             </div>
 
@@ -60,7 +60,7 @@ const Footer = () => {
                   <ul className="font-sans text-gray-500 dark:text-gray-400 font-medium">
                     <li className="mb-4">
                       <a
-                        href="https://www.w3.org/Provider/Style/dummy.html"
+                        href="/"
                         className="hover:underline"
                       >
                         Home
@@ -68,24 +68,24 @@ const Footer = () => {
                     </li>
                     <li className="mb-4">
                       <a
-                        href="https://www.w3.org/Provider/Style/dummy.html"
+                        href="/about_us"
                         className="hover:underline"
                       >
-                        About
+                        About Us
                       </a>
                     </li>
                     <li className="mb-4 text-slate-400">
                       <a
-                        href="https://www.w3.org/Provider/Style/dummy.html"
+                        href="/contact"
                         className="font-sans hover:underline"
                       >
-                        <div className=" text-slate-400">Services</div>
+                        <div className=" text-slate-400">Contact Us</div>
                         
                       </a>
                     </li>
                     <li>
                       <a
-                        href="https://www.w3.org/Provider/Style/dummy.html"
+                        href="/faq"
                         className="font-sans hover:underline"
                       >
                         FAQs
@@ -101,31 +101,31 @@ const Footer = () => {
                   <ul className="text-gray-500 dark:text-gray-400 font-medium">
                     <li className="mb-4">
                       <a
-                        href="https://www.w3.org/Provider/Style/dummy.html"
+                        href="/gallery"
                         className="hover:underline"
                       >
-                        Architecture
+                        Gallery
                       </a>
                     </li>
                     <li className="mb-4">
                       <a
-                        href="https://www.w3.org/Provider/Style/dummy.html"
+                        href="/event"
                         className="hover:underline"
                       >
-                        Buildings{" "}
+                        Events{" "}
                       </a>
                     </li>
                     <li className="mb-4">
                       <a
-                        href="https://www.w3.org/Provider/Style/dummy.html"
+                        href="/team"
                         className="hover:underline"
                       >
-                        3d maps
+                        Team
                       </a>
                     </li>
                     <li>
                       <a
-                        href="https://www.w3.org/Provider/Style/dummy.html"
+                        href="/"
                         className="hover:underline"
                       >
                         Structure Design
